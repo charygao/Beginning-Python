@@ -35,17 +35,17 @@ from sklearn.svm import SVR
 
 #使用线性核函数配置
 linear_svr = SVR(kernel='linear')
-linear_svr.fit(x_test,y_test)
+linear_svr.fit(x_train,y_train)
 linear_svr_y_predict = linear_svr.predict(x_test)
 
 #使用多项式核函数配置
 poly_svr = SVR(kernel='poly')
-poly_svr.fit(x_test,y_test)
+poly_svr.fit(x_train,y_train)
 poly_svr_y_predict = poly_svr.predict(x_test)
 
 #使用径向基核函数配置
 rbf_svr = SVR(kernel='rbf')
-rbf_svr.fit(x_test,y_test)
+rbf_svr.fit(x_train,y_train)
 rbf_svr_y_predict = rbf_svr.predict(x_test)
 
 
