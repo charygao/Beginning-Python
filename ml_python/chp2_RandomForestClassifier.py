@@ -54,6 +54,12 @@ gbc = GradientBoostingClassifier()
 gbc.fit(x_train,y_train)
 gbc_y_predict = gbc.predict(x_test)
 
+#使用xgboost模型
+from xgboost import XGBClassifier
+xgbc = XGBClassifier()
+xgbc.fit(x_train,y_train)
+xgbc_y_predict = xgbc.predict(x_test)
+
 
 #性能评估
 from sklearn.metrics import classification_report
@@ -66,5 +72,8 @@ print classification_report(rfc_y_predict,y_test,target_names=['died','survived'
 print ''
 print 'the accuracy of Gradient boosting Classifier is ',gbc.score(x_test,y_test)
 print classification_report(gbc_y_predict,y_test,target_names=['died','survived'])
+print ''
+print 'the accuracy of XGBClassifier is ',xgbc.score(x_test,y_test)
+print classification_report(xgbc_y_predict,y_test,target_names=['died','survived'])
 
 
