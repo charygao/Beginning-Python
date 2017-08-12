@@ -6,7 +6,7 @@ import sys
 target_url = ("https://archive.ics.uci.edu/ml/machine-learning-"
 "databases/undocumented/connectionist-bench/sonar/sonar.all-data")
 
-data = urllib2.urlopen(target_url)
+data = urllib2.urlopen(target_url).readlines()
 
 
 #arrange data into list for labels and list of lists for attributes
@@ -17,6 +17,7 @@ for line in data:
     #split on comma
     row = line.strip().split(",")
     xList.append(row)
+
 nrow = len(xList)
 ncol = len(xList[1])
 
@@ -34,9 +35,9 @@ for col in range(ncol):
                 type[1] += 1
             else:
                 type[2] += 1
-
     colCounts.append(type)
     type = [0]*3
+    
 
 sys.stdout.write("Col#" + '\t' + "Number" + '\t' +
                  "Strings" + '\t ' + "Other\n")
