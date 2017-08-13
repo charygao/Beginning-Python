@@ -32,7 +32,7 @@ def confusionMatrix(predicted, actual, threshold):
 
 #read data from uci data repository
 target_url = "https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data"
-data = urllib2.urlopen(target_url)
+data = urllib2.urlopen(target_url).readlines()
 
 #arrange data into list for labels and list of lists for attributes
 xList = []
@@ -92,7 +92,6 @@ tp = conMatTest[0]; fn = conMatTest[1]; fp = conMatTest[2]; tn = conMatTest[3]
 print("tp = " + str(tp) + "\tfn = " + str(fn) + "\n" + "fp = " + str(fp) + "\ttn = " + str(tn) + '\n')
 
 #generate ROC curve for in-sample
-
 fpr, tpr, thresholds = roc_curve(yTrain,trainingPredictions)
 roc_auc = auc(fpr, tpr)
 print( 'AUC for in-sample ROC curve: %f' % roc_auc)
