@@ -9,7 +9,7 @@ import matplotlib.pyplot as plot
 
 #read data into iterable
 target_url = "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
-data = urllib2.urlopen(target_url)
+data = urllib2.urlopen(target_url).readlines()
 
 xList = []
 labels = []

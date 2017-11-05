@@ -6,7 +6,7 @@ import matplotlib.pyplot as plot
 
 #read data from uci data repository
 target_url = "https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data"
-data = urllib2.urlopen(target_url)
+data = urllib2.urlopen(target_url).readlines()
 
 
 #arrange data into list for labels and list of lists for attributes
