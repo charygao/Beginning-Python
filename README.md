@@ -8,4 +8,5 @@ Beginning Python
 4、《Python 金融大数据分析》【德】Yves Hilpisch 著  
 5、https://www.tensorflow.org/get_started/  
 6、《Machine Learning in Python® Essential Techniques for Predictive Analysis》 Michael Bowles  
-7、《TensorFLow-实战Google深度学习框架》 才云科技 郑泽宇 等 著
+7、《TensorFLow-实战Google深度学习框架》 才云科技 郑泽宇 等 著  
+8、《Machine Learning in Action》 【美】Peter Harrington 著
